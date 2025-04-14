@@ -1,0 +1,14 @@
+.topTableContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.sizeSelect {
+    width: 80px;
+    margin: 0 5px;
+}
+
+.queryInput {
+    width: 250px;
+}

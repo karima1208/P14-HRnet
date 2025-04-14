@@ -1,0 +1,17 @@
+.myFormContainer {
+    width: 600px;
+    border: 1px solid lightgray;
+    padding: 20px;
+}
+
+.saveButton {
+    width: 100%;
+}
+
+.datePicker {
+    width: 100%;
+}
+
+.mt50 {
+    margin-top: 50px;
+}
