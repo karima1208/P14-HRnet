@@ -1,0 +1,17 @@
+.home-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 16px;
+    background-color:rgb(113, 140, 72);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  .home-link:hover {
+    background-color:rgb(157, 210, 107);
+  }
+  .link-container{
+    display: flex;
+  justify-content: center;
+  }

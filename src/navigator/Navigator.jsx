@@ -16,5 +16,4 @@ const Navigator = () => {
     </BrowserRouter>
   );
 };
-
 export default Navigator;

@@ -1,14 +1,29 @@
 .topTableContainer {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    justify-content: space-between; 
+    margin-bottom: 20px; 
 }
-
 .sizeSelect {
     width: 80px;
-    margin: 0 5px;
+    margin: 0 5px; 
+}
+.queryInput {
+    width: 250px; 
+}
+.header{
+    display: flex;
+    justify-content: center;
 }
 
-.queryInput {
-    width: 250px;
+@media (max-width: 1024px) {
+    .sizeSelect,
+    .queryInput {
+      width: 100%;
+    }
+  .selectWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    white-space: nowrap; /* empêche les mots de se casser à la ligne */
+  }
 }
