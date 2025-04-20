@@ -2,6 +2,20 @@ main {
   max-width: 1440px;
   margin: 0 auto;
 }
+.ant-table {
+  
+}
+
+.ant-table-tbody > tr > td {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.ant-table-thead > tr > th {
+  font-weight: bold; /* Laisse les titres normaux */
+  font-size: 18px;
+}
+
 /* TABLETTE + MOBILE : tous les écrans < 1024px */
 @media (max-width: 1024px) {
   main {

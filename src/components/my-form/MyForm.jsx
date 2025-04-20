@@ -122,7 +122,7 @@ const MyForm = ({ setOpenModal }) => {
 
         <Form.Item label={null} className="mt50">
           <div className="button-container">
-            <button className="button-save" >
+            <button type="submit" className="button-save" >
               Save
             </button>
           </div>

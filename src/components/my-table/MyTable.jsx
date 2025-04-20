@@ -109,9 +109,9 @@ const MyTable = () => {
   return (
     <div>
       <div className="header">
-          <img src={logo} alt="HRnet logo" className="logo" />
-          <h1>Current Employees</h1>
-        </div>
+        <img src={logo} alt="HRnet logo" className="logo" loading="lazy" />
+        <h1>Current Employees</h1>
+      </div>
       
 
       {/* Section de contrôle du tableau : sélection de la taille et champ de recherche */}
@@ -152,8 +152,9 @@ const MyTable = () => {
 
       {/* Informations sur la pagination affichées sous le tableau */}
       <div>
-        Showing {currentPage} to {Math.ceil(filteredEmployees.length / pageSize)} of {filteredEmployees.length} entries
+        Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, filteredEmployees.length)}  of  {filteredEmployees.length} entries
       </div>
+
     </div>
   );
 };

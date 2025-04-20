@@ -13,9 +13,11 @@
     margin-top: 50px;
 }
 .button-save{
+    font-size: 23px;
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 16px;
+    margin-top: 13px;
+    padding: 6px 50px;
+    font-family: 'Georgia', 'Times New Roman', serif;
     background-color:rgb(113, 140, 72);
     color: white;
     text-decoration: none;
@@ -30,6 +32,13 @@
     display: flex;
     justify-content: center;
 }
+/* Changer la taille des labels des champs du formulaire */
+.ant-form-item-label > label {
+    font-size: 18px;
+    font-weight: bold; /* facultatif, pour les mettre en gras */
+    
+  }
+  
 
   @media (max-width: 1024px) {
     .myFormContainer,

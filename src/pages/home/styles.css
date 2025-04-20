@@ -26,8 +26,11 @@
     margin-bottom: 20px;
   }
   .logo {
-    height: 50px;
+    height: 100px;
     margin-right: 10px;
+  }
+  h2{
+    font-size: 35px;
   }
   /* Responsive pour tablette + mobile */
   @media (max-width: 1024px) {

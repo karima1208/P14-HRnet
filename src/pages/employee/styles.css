@@ -1,7 +1,8 @@
 .home-link {
+    font-size: 25px;
     display: inline-block;
     margin-top: 20px;
-    padding: 10px 16px;
+    padding: 10px 50px;
     background-color:rgb(113, 140, 72);
     color: white;
     text-decoration: none;

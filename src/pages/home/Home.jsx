@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="homeContainer">
         <div className="header">
-        <img src={logo} alt="HRnet logo" className="logo" />
+        <img src={logo} alt="HRnet logo" className="logo" loading="lazy" />
         <h1>HRnet</h1>
       </div>
       <Link to="/employee" className="home-link" >View Current Employees</Link>
