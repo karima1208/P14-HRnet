@@ -1,13 +1,11 @@
-// Import des composants Ant Design nécessaires
 import DatePicker from "antd/es/date-picker";
 import Form from "antd/es/form";
 import Input from "antd/es/input";
-
 import React from "react";
 import { v4 as uuidv4 } from "uuid"; // Génère un ID unique
 import { useDispatch } from "react-redux";
 import { addEmployee } from "../../features/employeeSlice"; // Action Redux pour ajouter un employé
-import SelectDepartment from "../select-department/SelectDepartment"; 
+import SelectDepartment from "../select-department/SelectDepartment";
 import SelectState from "../select-state/SelectState";
 import "./styles.css";
 
@@ -18,17 +16,19 @@ const MyForm = ({ setOpenModal }) => {
 
   // Fonction appelée lorsque le formulaire est soumis avec succès
   const onFinish = (values) => {
-    //Formatage des dates en chaînes (pour éviter une erreur Redux sur les objets non sérialisables)
+    console.log('Form Values:', values); // Affiche les valeurs dans la console pour vérification
+
+    // Formatage des dates en chaînes (pour éviter une erreur Redux sur les objets non sérialisables)
     values.dateOfBirth = values.dateOfBirth.format("YYYY-MM-DD");
     values.startDate = values.startDate.format("YYYY-MM-DD");
 
-    //Création d’un nouvel objet employé avec un ID unique
+    // Création d’un nouvel objet employé avec un ID unique
     const newEmployee = { ...values, id: uuidv4() };
 
-    //Envoi de l’employé dans le store Redux
+    // Envoi de l’employé dans le store Redux
     dispatch(addEmployee(newEmployee));
 
-    //Enregistrement facultatif dans le localStorage pour garder les données même après un rafraîchissement
+    // Enregistrement facultatif dans le localStorage pour garder les données même après un rafraîchissement
     const employeesFromStorage = localStorage.getItem("employees");
     let newEmployeesList = [];
     if (!employeesFromStorage) {
@@ -38,9 +38,10 @@ const MyForm = ({ setOpenModal }) => {
     }
     localStorage.setItem("employees", JSON.stringify(newEmployeesList));
 
-    //Affichage de la modal de confirmation
-    setOpenModal(true);
-    //Réinitialisation des champs du formulaire
+    // Affichage de la modal de confirmation
+    setOpenModal(true); // Déclenche l'ouverture de la modal
+
+    // Réinitialisation des champs du formulaire
     form.resetFields();
   };
 
@@ -122,7 +123,7 @@ const MyForm = ({ setOpenModal }) => {
 
         <Form.Item label={null} className="mt50">
           <div className="button-container">
-            <button type="submit" className="button-save" >
+            <button type="submit" className="button-save">
               Save
             </button>
           </div>

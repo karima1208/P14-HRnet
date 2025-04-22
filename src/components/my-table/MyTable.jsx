@@ -90,21 +90,31 @@ const MyTable = () => {
   }, []);
 
   // Fonction de filtrage lors de la recherche
+  const searchableFields = [
+    "firstname",
+    "lastname",
+    "startDate",
+    "department",
+    "dateOfBirth",
+    "street",
+    "city",
+    "state",
+    "zipCode",
+  ];
+  
+  // Fonction de filtrage lors de la recherche (optimisée)
   const onChangeFilter = (query) => {
-    let newEmployeesList = employees.filter(
-      (employee) =>
-        employee.lastname.toLowerCase().includes(query.toLowerCase()) ||
-        employee.firstname.toLowerCase().includes(query.toLowerCase()) ||
-        employee.startDate.toLowerCase().includes(query.toLowerCase()) ||
-        employee.department.toLowerCase().includes(query.toLowerCase()) ||
-        employee.dateOfBirth.toLowerCase().includes(query.toLowerCase()) ||
-        employee.street.toLowerCase().includes(query.toLowerCase()) ||
-        employee.city.toLowerCase().includes(query.toLowerCase()) ||
-        employee.state.toLowerCase().includes(query.toLowerCase()) ||
-        employee.zipCode.toLowerCase().includes(query.toLowerCase())
+    const loweredQuery = query.toLowerCase();
+  
+    const newEmployeesList = employees.filter((employee) =>
+      searchableFields.some((field) =>
+        String(employee[field]).toLowerCase().includes(loweredQuery)
+      )
     );
+  
     setFilteredEmployees(newEmployeesList);
   };
+  
 
   return (
     <div>

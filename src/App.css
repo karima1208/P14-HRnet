@@ -2,9 +2,6 @@ main {
   max-width: 1440px;
   margin: 0 auto;
 }
-.ant-table {
-  
-}
 
 .ant-table-tbody > tr > td {
   font-weight: normal;

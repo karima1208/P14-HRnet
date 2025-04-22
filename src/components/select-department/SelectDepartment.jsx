@@ -14,16 +14,17 @@ const SelectDepartment = () => {
       name="department"
       rules={[{ required: true, message: "Please input your department!" }]}
     >
-      <Select>
-        {departmentsList.map((state) => (
-          <Select.Option value={state.abbreviation}>
-            {state.name}
-          </Select.Option>
-        ))}
+    <Select>
+      {departmentsList.map((dep) => (
+     <Select.Option key={dep} value={dep}>
+      {dep}
+    </Select.Option>
+))}
       </Select>
     </Form.Item>
   );
 };
 
 // Exportation du composant pour qu’il puisse être utilisé ailleurs dans le projet
-export default SelectDepartment;
+
+export default React.memo(SelectDepartment);

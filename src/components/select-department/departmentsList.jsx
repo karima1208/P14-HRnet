@@ -1,22 +1,7 @@
 export const departmentsList = [
-  {
-    name: "Sales",
-    abbreviation: "Sales",
-  },
-  {
-    name: "Marketing",
-    abbreviation: "Marketing",
-  },
-  {
-    name: "Engineering",
-    abbreviation: "Engineering",
-  },
-  {
-    name: "Human Resources",
-    abbreviation: "Human Resources",
-  },
-  {
-    name: "Legal",
-    abbreviation: "Legal",
-  },
+  "Sales",
+  "Marketing",
+  "Engineering",
+  "Human Resources",
+  "Legal",
 ];
